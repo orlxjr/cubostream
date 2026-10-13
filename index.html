@@ -474,15 +474,12 @@ const WHATSAPP_NUMBER = "584248476825";
 function waLink(text){
   return `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(text)}&type=phone_number&app_absent=0`;
 }
-const GENERIC_TEXT = "Hola, visitaba la página de CuboStream y quiero información sobre sus servicios";
+const GENERIC_TEXT = "Hola, visitaba la página web y quiero información sobre sus servicios, por favor.";
 ["navCta","waClick","floatWa","footerWa"].forEach(id=>{
   const el = document.getElementById(id);
   if(el) el.href = waLink(GENERIC_TEXT);
 });
-const promoWaBtn = document.getElementById("promoWaBtn");
-if(promoWaBtn){
-  promoWaBtn.href = waLink("Hola, quiero usar el código CUBO30 en mi primera compra");
-}
+
 
 const ICONS = {
   netflix: `<svg viewBox="0 0 60 80"><text x="0" y="66" font-family="Nunito Sans, sans-serif" font-weight="900" font-size="80" fill="#E50914">N</text></svg>`,
